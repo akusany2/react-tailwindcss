@@ -1,12 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Routes from './routes';
+import { createFirebaseConnection } from './service/firebase.service';
 import * as serviceWorker from './serviceWorker';
 
+createFirebaseConnection();
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Routes />
   </React.StrictMode>,
   document.getElementById('root')
 );
